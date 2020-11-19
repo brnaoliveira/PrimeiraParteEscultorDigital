@@ -1,0 +1,61 @@
+\hypertarget{Sculptor_8cpp}{}\section{Referência do Arquivo Sculptor.\+cpp}
+\label{Sculptor_8cpp}\index{Sculptor.\+cpp@{Sculptor.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$Sculptor.\+h$>$}\newline
+Gráfico de dependência de inclusões para Sculptor.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{Sculptor_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structVoxel}{Voxel} $\ast$$\ast$$\ast$ \hyperlink{Sculptor_8cpp_a702174f787dbf131405d9ddccb240611}{aloca\+Espaco} (int nc, int na, int nl)
+\item 
+bool \hyperlink{Sculptor_8cpp_a038fe43a962d4018b69218cd036b947a}{verifica\+Cord} (int x, int y, int z, int nc, int na, int nl)
+\item 
+bool \hyperlink{Sculptor_8cpp_aabf9cc6b6b14c65c22f065d37ae46114}{satisfaz\+Eq\+Esfera} (int z, int x, int y, int a, int b, int c, int raio)
+\item 
+bool \hyperlink{Sculptor_8cpp_af3991c70607baa62e160b3e034cc6340}{satisfaz\+Eq\+Elipse} (int z, int x, int y, int xcent, int ycent, int zcent, int a, int b, int c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Funções}
+\mbox{\Hypertarget{Sculptor_8cpp_a702174f787dbf131405d9ddccb240611}\label{Sculptor_8cpp_a702174f787dbf131405d9ddccb240611}} 
+\index{Sculptor.\+cpp@{Sculptor.\+cpp}!aloca\+Espaco@{aloca\+Espaco}}
+\index{aloca\+Espaco@{aloca\+Espaco}!Sculptor.\+cpp@{Sculptor.\+cpp}}
+\subsubsection{\texorpdfstring{aloca\+Espaco()}{alocaEspaco()}}
+{\footnotesize\ttfamily \hyperlink{structVoxel}{Voxel}$\ast$$\ast$$\ast$ aloca\+Espaco (\begin{DoxyParamCaption}\item[{int}]{nc,  }\item[{int}]{na,  }\item[{int}]{nl }\end{DoxyParamCaption})}
+
+Fução aloca\+Espaco
+
+função \char`\"{}aloca\+Espaco\char`\"{} tem esse nome devido a sua função do escultor,  é responsável por alocar o espaço tridimensional onde ser feito a escultura 3D  é feita uma alocação de uma matriz, onde cada elemento dessa matriz recebe  vetor que corresponde a altura desse espaço.
+
+alocação referente as linhas da matriz
+
+$<$ verifica se a alocação da memória foi feita da forma correta
+
+alocação das colunas de forma onde o primeiro endereço de \char`\"{}aux\char`\"{} contenha o primeiro endereço referente ao vetor de colunas da minha matriz. A iteração que vem logo em seguida serve para ajustar os endereços de memoria de forma que fiquem sequenciais
+
+$<$ Iteração para ajuste das posições do eixo X na memória \mbox{\Hypertarget{Sculptor_8cpp_af3991c70607baa62e160b3e034cc6340}\label{Sculptor_8cpp_af3991c70607baa62e160b3e034cc6340}} 
+\index{Sculptor.\+cpp@{Sculptor.\+cpp}!satisfaz\+Eq\+Elipse@{satisfaz\+Eq\+Elipse}}
+\index{satisfaz\+Eq\+Elipse@{satisfaz\+Eq\+Elipse}!Sculptor.\+cpp@{Sculptor.\+cpp}}
+\subsubsection{\texorpdfstring{satisfaz\+Eq\+Elipse()}{satisfazEqElipse()}}
+{\footnotesize\ttfamily bool satisfaz\+Eq\+Elipse (\begin{DoxyParamCaption}\item[{int}]{z,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{xcent,  }\item[{int}]{ycent,  }\item[{int}]{zcent,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Sculptor_8cpp_aabf9cc6b6b14c65c22f065d37ae46114}\label{Sculptor_8cpp_aabf9cc6b6b14c65c22f065d37ae46114}} 
+\index{Sculptor.\+cpp@{Sculptor.\+cpp}!satisfaz\+Eq\+Esfera@{satisfaz\+Eq\+Esfera}}
+\index{satisfaz\+Eq\+Esfera@{satisfaz\+Eq\+Esfera}!Sculptor.\+cpp@{Sculptor.\+cpp}}
+\subsubsection{\texorpdfstring{satisfaz\+Eq\+Esfera()}{satisfazEqEsfera()}}
+{\footnotesize\ttfamily bool satisfaz\+Eq\+Esfera (\begin{DoxyParamCaption}\item[{int}]{z,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{c,  }\item[{int}]{raio }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Sculptor_8cpp_a038fe43a962d4018b69218cd036b947a}\label{Sculptor_8cpp_a038fe43a962d4018b69218cd036b947a}} 
+\index{Sculptor.\+cpp@{Sculptor.\+cpp}!verifica\+Cord@{verifica\+Cord}}
+\index{verifica\+Cord@{verifica\+Cord}!Sculptor.\+cpp@{Sculptor.\+cpp}}
+\subsubsection{\texorpdfstring{verifica\+Cord()}{verificaCord()}}
+{\footnotesize\ttfamily bool verifica\+Cord (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z,  }\item[{int}]{nc,  }\item[{int}]{na,  }\item[{int}]{nl }\end{DoxyParamCaption})}
+
+função para averiguar se as coordenadas passadas como parametro pertencem ao espaço tridimencional com tamanho informado (x,y,z) são as coordenadas que seram verificadas (nc,na,nl) são as dimensões do espaço 3D que será usado, correspondentes a (nx,ny,nz) respectivamente 
