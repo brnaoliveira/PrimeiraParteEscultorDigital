@@ -87,7 +87,7 @@ bool satisfazEqEsfera(int z,int x,int y,int a,int b,int c, int raio)
 }
 bool satisfazEqElipse(int z,int x,int y,int xcent, int ycent,int zcent,int a,int b,int c)
 {
-    int aux = (x-xcent)*(x-xcent)/(a*a) + (y-ycent)*(y-ycent)/(b*b) + (z-zcent)*(z-zcent)/(c*c);
+    int aux = (float)(x-xcent)*(x-xcent)/(a*a) + (float)(y-ycent)*(y-ycent)/(b*b) + (float)(z-zcent)*(z-zcent)/(c*c);
     if(aux <= 1)
         return true;
     else
